@@ -1,24 +1,100 @@
-<div class="Container">
-    <div class="card-header">
-        
-    </div>
-    <div class="card-body">
-        <Form action="">
-            
-            <div class="form-group">
-                <label for="">Nombres</label>
-                <input type="text" class="form-control"  name="nombres">
-                
-            </div>
-            <div class="form-group">
-                <label for="">Apellidos</label>
-                <input type="text" class="form-control" name="apellidos">
-            </div>
-          <br>
+<div class="row">
+    <div class="col-md-12">
+        <div class="title">
+            <div class="row">
+                <div class="col-lg-12">
 
-            <button class="btn btn-success">
-                GUARDAR
-            </button>
+                    <form action="" method="POST">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="form-group">
+                                    <label class="control-label">Nombres</label>
+                                    <input type="text" class="form-control" [(ngModel)]="cliente.nombres" name="nombres" placeholder="Ejemplo: Kevin Daniel" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{1,30}" 
+                                    required="required" minlength="3" maxlength="30" title="Solamente se admiten caracteres">
+                                </div>
+                            </div>
 
-        </Form>
+                            <div class="col-lg-4">
+                                <div class="form-group">
+                                    <label class="control-label">Apellidos</label>
+                                    <input type="text" class="form-control" [(ngModel)]="cliente.apellidos" name="apellidos" placeholder="Ejemplo: Gómez Cantillo" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{1,30}" 
+                                    required="required" minlength="3" maxlength="30" title="Solamente se admiten caracteres">
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="form-group">
+                                    <label class="control-label">Identificación</label>
+                                    <input type="number" class="form-control" [(ngModel)]="cliente.identificacion" name="identificacion" placeholder="Ejemplo: 123456789" minlength="6" maxlength="11"
+                                    pattern="[0-9]{1,12}" title="Solamente se admiten números"
+                                    required="required">
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+
+                            <div class="col-lg-4">
+                                <div class="form-group">
+                                    <label class="control-label">Correo electronico</label>
+                                    <input type="email" class="form-control" [(ngModel)]="cliente.correoElectronico" name="correoElectronico" 
+                                    placeholder="Ejemplo: correo@example.com" required="required">
+                                    
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="form-group">
+                                    <label class="control-label">Telefono uno</label>
+                                    <input type="text" class="form-control" [(ngModel)]="cliente.telefonoUno" name="telefonoUno" placeholder="Ejemplo: 3001234567" minlength="10" maxlength="10"
+                                    pattern="[0-9]{1,12}" title="Solamente se admiten números"
+                                    required="required">
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="form-group">
+                                    <label class="control-label">Telefono dos</label>
+                                    <input type="text" class="form-control" [(ngModel)]="cliente.telefonoDos" name="telefonoDos" placeholder="Ejemplo: 3001234567" minlength="10" maxlength="10"
+                                    pattern="[0-9]{1,12}" title="Solamente se admiten números"
+                                    required="required">
+                                </div>
+                            </div>
+
+                        </div>
+                        <br>
+
+                        <div class="row">
+
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label class="control-label">Direccion uno</label>
+                                    <input type="text" class="form-control" [(ngModel)]="cliente.direccionUno" name="direccionUno" 
+                                    placeholder="Ejemplo: Calle 3 #20-42 Barrio la quinta" required="required">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label class="control-label">Direccion dos</label>
+                                    <input type="text" class="form-control" [(ngModel)]="cliente.direccionDos" name="direccionDos" 
+                                    placeholder="Ejemplo: Calle 3 #20-42 Barrio la quinta" required="required">
+                                </div>
+                            </div>
+
+                        </div>
+                        <br>
+
+
+                        
+                    <div class="modal-footer">
+                            <button (click)="PostClientes()" name="postcliente" class="btn btn-success"><i
+                                class="fa fa-fw fa-lg fa-check-circle"></i>
+                                Registrar
+                            </button>
+                            <button type="button" id="btnLimpiar" class="btn btn-danger"><i
+                                class="fa fa-fw fa-lg fa-times-circle"></i>Cancelar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+

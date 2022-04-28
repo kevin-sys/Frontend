@@ -21,7 +21,7 @@ export class ConsultarclienteComponent implements OnInit {
       this.clientes=data;
     })
   }
-  PostClientes(cliente:Cliente):void{
+  PutCliente(cliente:Cliente):void{
     localStorage.setItem("id",cliente.id.toString());
     this.router.navigate(["editarcliente"]);
   }

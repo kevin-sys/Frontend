@@ -3,9 +3,9 @@ export class Cliente {
     nombres!:string;
     identificacion!:string;
     apellidos!:string;
-    telefono_uno!:string;
-    telefono_dos!:string;
-    correo_electronico!:string;
-    direccion_uno!:string;
-    direccion_dos!:string;
+    telefonoUno!:string;
+    telefonoDos!:string;
+    correoElectronico:string="";
+    direccionUno!:string;
+    direccionDos!:string;
 }

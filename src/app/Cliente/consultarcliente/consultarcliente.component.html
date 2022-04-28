@@ -9,9 +9,11 @@
                     <th scope="col">Id</th>
                     <th scope="col">Nombres </th>
                     <th scope="col">Apellidos</th>
-                    <th scope="col">identificacion</th>
+                    <th scope="col">Identificacion</th>
                     <th scope="col">Correo</th>
-                    <th scope="col">Telefono</th>
+                    <th scope="col">Telefonos</th>
+                    <th scope="col">Direccion uno</th>
+                    <th scope="col">Direccion dos</th>
                     <th scope="col">ACCIONES</th>
                 </tr>
             </thead>
@@ -22,11 +24,13 @@
                     <td>{{cliente.nombres}}</td>
                     <td>{{cliente.apellidos}}</td>
                     <td>{{cliente.identificacion}}</td>
-                    <td>{{cliente.direccion_dos}}</td>
-                    <td>{{cliente.telefono_uno}}</td>
+                    <td>{{cliente.correoElectronico}}</td>
+                    <td>{{cliente.telefonoUno+" - "+cliente.telefonoDos}}</td>
+                    <td>{{cliente.direccionUno}}</td>
+                    <td>{{cliente.direccionDos}}</td>
 
                     <td>
-                        <button (click)="PostClientes(cliente)" class="btn btn-warning">Editar</button>
+                        <button (click)="PutCliente(cliente)" class="btn btn-warning">Editar</button>
                         <button (click)="DeleteCliente(cliente)" class="btn btn-danger" style="margin-left: 10px;">Eliminar</button>
                       </td>
                 </tr>

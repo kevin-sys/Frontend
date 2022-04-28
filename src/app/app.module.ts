@@ -10,6 +10,7 @@ import { EditarclienteComponent } from './Cliente/editarcliente/editarcliente.co
 import{FormsModule}from'@angular/forms';
 import{HttpClientModule}from'@angular/common/http';
 import { ClienteserviceService } from './Service/clienteservice.service';
+import { ProductoserviceService } from './Service/productoservice.service';
 
 
 @NgModule({
@@ -25,7 +26,7 @@ import { ClienteserviceService } from './Service/clienteservice.service';
     FormsModule,
     HttpClientModule
   ],
-  providers: [ClienteserviceService],
+  providers: [ClienteserviceService, ProductoserviceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
