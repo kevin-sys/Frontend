@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Frontend';
+
+  constructor(private router:Router){}
+  RegistrarCliente(){
+    this.router.navigate(["registrarcliente"]);
+  }
+  ConsultarCliente(){
+    this.router.navigate(["consultarcliente"]);
+  }
+  EditarCliente(){
+    this.router.navigate(["editarcliente"]);
+  }
 }
