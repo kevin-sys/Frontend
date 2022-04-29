@@ -1,0 +1,74 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="title">
+            <div class="row">
+                <div class="col-lg-12">
+
+                    <form action="" method="POST">
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <div class="form-group">
+                                    <label class="control-label">Nombre del producto</label>
+                                    <input type="text" class="form-control" [(ngModel)]="producto.nombreProducto"
+                                        name="nombreProducto" placeholder="Ejemplo: Mouse inalambrico"
+                                        pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{1,30}" required="required" minlength="3"
+                                        maxlength="30" title="Solamente se admiten caracteres">
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3">
+                                <div class="form-group">
+                                    <label class="control-label">Precio</label>
+                                    <input type="number" class="form-control" [(ngModel)]="producto.precio"
+                                        name="precio" placeholder="Ejemplo: 5000" minlength="3" maxlength="11"
+                                        pattern="[0-9]{1,12}" title="Solamente se admiten números" required="required">
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3">
+                                <div class="form-group">
+                                    <label class="control-label">Stock</label>
+                                    <input type="number" class="form-control" [(ngModel)]="producto.stock" name="stock"
+                                        placeholder="Ejemplo: 100" minlength="1" maxlength="9" pattern="[0-9]{1,12}"
+                                        title="Solamente se admiten números" required="required">
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3">
+                                <div class="form-group">
+                                    <label class="control-label">IVA</label>
+                                    <input type="number" class="form-control" [(ngModel)]="producto.iva" name="iva"
+                                        placeholder="Ejemplo: 19" minlength="1" maxlength="2" pattern="[0-9]{1,12}"
+                                        title="Solamente se admiten números" required="required">
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="form-group">
+                                    <label class="control-label">Descripción</label>
+                                    <input type="text" class="form-control" [(ngModel)]="producto.descripcion"
+                                        name="descripcion" placeholder="Ejemplo: Mouse gamer ergonomico"
+                                        pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{1,30}" required="required" minlength="3"
+                                        maxlength="30" title="Solamente se admiten caracteres">
+                                </div>
+                            </div>
+
+                        </div>
+                        <br>
+
+                        <div class="modal-footer">
+                            <button (click)="PostProductos()" name="postProductos" class="btn btn-success"><i
+                                    class="fa fa-fw fa-lg fa-check-circle"></i>
+                                Registrar
+                            </button>
+                            <button type="button" id="btnLimpiar" class="btn btn-danger"><i
+                                    class="fa fa-fw fa-lg fa-times-circle"></i>Cancelar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

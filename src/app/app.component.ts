@@ -10,14 +10,24 @@ import { Router } from '@angular/router';
 export class AppComponent {
   title = 'Frontend';
 
-  constructor(private router:Router){}
-  RegistrarCliente(){
+  constructor(private router: Router) { }
+  RegistrarCliente() {
     this.router.navigate(["registrarcliente"]);
   }
-  ConsultarCliente(){
+  ConsultarCliente() {
     this.router.navigate(["consultarcliente"]);
   }
-  EditarCliente(){
+  EditarCliente() {
     this.router.navigate(["editarcliente"]);
+  }
+
+  RegistrarProducto() {
+    this.router.navigate(["registrarproducto"]);
+  }
+  ConsultarProducto() {
+    this.router.navigate(["consultarproducto"]);
+  }
+  EditarProducto() {
+    this.router.navigate(["editarproducto"]);
   }
 }

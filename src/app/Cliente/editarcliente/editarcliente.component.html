@@ -1,1 +1,34 @@
-<p>editarcliente works!</p>
+<div class="Container">
+    <div class="card-header">
+       
+    </div>
+    <div class="card-body">
+        <Form action="">
+            
+            <div class="form-group">
+                <label for="">Nombres</label>
+                <input type="text" class="form-control" [(ngModel)]="cliente.nombres" name="nombres">
+                
+            </div>
+            <div class="form-group">
+                <label for="">Apellidos</label>
+                <input type="text" class="form-control" [(ngModel)]="cliente.apellidos" name="apellidos">
+            </div>
+            <div class="form-group">
+                <label for="">Cedula</label>
+                <input type="number" class="form-control" [(ngModel)]="cliente.identificacion" name="cedula">
+            </div>
+            <div class="form-group">
+                <label for="">Correo</label>
+                <input type="email" class="form-control" [(ngModel)]="cliente.correoElectronico" name="correo">
+                
+            </div>
+            
+
+
+            <button (click)="PutCliente(cliente)" class="btn btn-warning">
+                ACTUALIZAR
+            </button>
+
+        </Form>
+    </div>
